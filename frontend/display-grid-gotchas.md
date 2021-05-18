@@ -9,8 +9,10 @@ parent {
 }
 
 child {
-  grid-area: 'area-1' // Will NOT work
-  grid-area: area-1 // Proper syntax
+  /* Will NOT work */
+  grid-area: 'area-1';
+  /* Proper syntax */
+  grid-area: area-1;
 }
 ```
 
