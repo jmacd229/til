@@ -2,7 +2,17 @@
 Display grid is incredibly powerful, but can also be incredibly confusing with the millions of ways to configure named areas, lines, and more.
 
 ## Grid Template Area Syntax
-* While naming the template areas in the grid parent, the names are wrapped in quotations, however when referencing the area name from the child *do not* use quotations
+While naming the template areas in the grid parent, the names are wrapped in quotations, however when referencing the area name from the child *do not* use quotations
+```css
+parent {
+  grid-template-areas: 'area-1 area-2 area-3';
+}
+
+child {
+  grid-area: 'area-1' // Will NOT work
+  grid-area: area-1 // Proper syntax
+}
+```
 
 ## Implicit and Explicit Grids
 There are two types of grid cells in a display grid element, [explicit and implicit](https://css-tricks.com/difference-explicit-implicit-grids).
